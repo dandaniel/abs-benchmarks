@@ -1,0 +1,29 @@
+<style>
+[ng-cloak] { display: none; }
+</style>
+<div ng-app="benchmark" ng-cloak>
+  <div ng-controller="DataController as ctrl">
+    <div class="container-fluid">
+      <h1>
+      Provider page: ng-repeat with and without track by $index
+      </h1>
+
+      <div ng-repeat="state in variableStates">{{state.label}}: <input type="radio" name="variableState" ng-model="ctrl.benchmarkType" ng-value="state.value"></div>
+
+      <ng-switch on="ctrl.benchmarkType">
+        <div ng-switch-when="defaultRepeat">
+          <h2>default repeat</h2>
+          <p class="col-xs-12 col-sm-3" data-ng-repeat="service in services | filter:search">
+            {{service}}
+          </p>
+        </div>
+        <div ng-switch-when="trackByIndex">
+          <h2>track by index</h2>
+          <p class="col-xs-12 col-sm-3" data-ng-repeat="service in services | filter:search track by $index">
+            {{service}}
+          </p>
+        </div>
+      </ng-switch>
+    </div>
+  </div>
+</div>
