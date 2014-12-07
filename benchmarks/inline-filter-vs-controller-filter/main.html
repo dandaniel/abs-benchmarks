@@ -1,0 +1,223 @@
+<style>
+[ng-cloak] { display: none; }
+</style>
+<div ng-app="benchmark" ng-cloak>
+  <div ng-controller="DataController as ctrl">
+    <div class="container-fluid">
+      <h1>
+      Inline filter vs filter in controller
+      </h1>
+
+      <div ng-repeat="state in variableStates">{{state.label}}: <input type="radio" name="variableState" ng-model="ctrl.benchmarkType" ng-value="state.value"></div>
+
+      <ng-switch on="ctrl.benchmarkType">
+        <div ng-switch-when="inlineFilter">
+          <h2>Inline filter</h2>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+          <span>{{inlineCurrentDate | date:'medium'}}</span>
+        </div>
+        <div ng-switch-when="controllerFilter">
+          <h2>Controller filter</h2>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+          <span>{{currentDate}}</span>
+        </div>
+      </ng-switch>
+    </div>
+  </div>
+</div>
