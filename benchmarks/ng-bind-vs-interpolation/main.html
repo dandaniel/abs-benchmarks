@@ -1,0 +1,336 @@
+<style>
+[ng-cloak] { display: none; }
+</style>
+<div ng-app="benchmark" ng-cloak>
+  <div ng-controller="DataController as ctrl">
+    <div class="container-fluid">
+      <h1>
+      Interpolation vs ng-bind vs ng-bind-template
+      </h1>
+
+      <div ng-repeat="state in variableStates">{{state.label}}: <input type="radio" name="variableState" ng-model="ctrl.benchmarkType" ng-value="state.value"></div>
+
+      <ng-switch on="ctrl.benchmarkType">
+        <div ng-switch-when="interpolation">
+          <h2>interpolation x100</h2>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+          <span>{{item}}</span>
+                   </div>
+        <div ng-switch-when="ngBind">
+          <h2>ng-bind x100</h2>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+          <span ng-bind="item"></span>
+        </div>
+        <div ng-switch-when="ngBindTemplate">
+          <h2>ng-bind-template x100</h2>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+          <span ng-bind-template="{{item}}"></span>
+        </div>
+      </ng-switch>
+    </div>
+  </div>
+</div>
