@@ -12,7 +12,7 @@ Angular benchpress is used for benchmarking, so check out [their repo](https://g
 $ npm install
 ```
 
-###Getting started
+###Running Benchmarks
 
 A grunt task will build and run the benchmark server on **localhost:3339**.
 
